@@ -60,7 +60,6 @@ $(document).ready(function() {
            // Variante di singolo OBJECT che è dentro l'Array.
            var cd = data[i];
            var author = cd['author'];
-
            // Se AUTHOR non è ancora incluso, lo stampo nel SELECT, Altrementi non lo aggiungo di nuovo.
            if (authorAll.includes(author) == false){
              authorAll.push(author)
@@ -69,13 +68,7 @@ $(document).ready(function() {
              // Appendere TEMPLATE HTML nel Elemento desiderato.
              $("#js_select").append(html);
            }
-
-
-
-
-
          }
-
       },
       error: function(richiesta, stato, errore){
           alert('ERROR');
@@ -104,9 +97,5 @@ $(document).ready(function() {
     });
 
   });
-
-
-  // END PROVA
-
 
 });

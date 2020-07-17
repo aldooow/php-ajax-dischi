@@ -35,10 +35,11 @@ Oggi facciamo solo la versione index fatta col php utilizzando laravel-mix per i
             <img src="img/logo.png" alt="logo" />
             <select id="js_select">
               <option value="All">All</option>
-              <option value="Pop">Pop</option>
-              <option value="Rock">Rock</option>
-              <option value="Metal">Metal</option>
-              <option value="Jazz">Jazz</option>
+
+              <?php foreach($database as $dati) {?>
+              <option value="<?php echo  $dati['author'];?>"><?php echo  $dati['author'];?></option>
+              <?php } ?>
+
             </select>
         </div>
 
