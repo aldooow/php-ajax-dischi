@@ -25,10 +25,7 @@ album per artista
             <img src="img/logo.png" alt="logo" />
             <select id="js_select">
               <option value="All">All</option>
-              <option value="Pop">Pop</option>
-              <option value="Rock">Rock</option>
-              <option value="Metal">Metal</option>
-              <option value="Jazz">Jazz</option>
+              <!-- CHIAMATA AJAX AUTHOR -->
             </select>
         </div>
 
@@ -36,11 +33,11 @@ album per artista
 
     <div class="cds-container container">
 
-      <!-- Chiamata AJAX -->
+      <!-- CHIAMATA AJAX CD -->
 
     </div>
 
-    <!-- TEMPLATE -->
+    <!-- TEMPLATE CD-->
     <script id="entry-template"  type="text/x-handlebars-template">
 
       <div class="cd">
@@ -52,13 +49,21 @@ album per artista
       </div>
 
     </script>
-    <!-- END TEMPLATE -->
+    <!-- END TEMPLATE CD -->
+
+    <!-- TEMPLATE AUTHOR-->
+    <script id="author-template"  type="text/x-handlebars-template">
+
+      <option value="{{ author }}">{{ author }}</option>
+
+    </script>
+    <!-- END TEMPLATE AUTHOR -->
 
     <!-- SCRIPT -->
     <script src="dist/app.js">
 
     </script>
-    <!-- END SCRIPT --> 
+    <!-- END SCRIPT -->
 
   </body>
 </html>
