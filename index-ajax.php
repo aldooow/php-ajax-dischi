@@ -1,17 +1,10 @@
-
-<?php include 'database.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <!-- CSS -->
     <link rel="stylesheet" href="dist/app.css">
-    <!-- FONTAWESONE -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <!-- ROBOTO -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <title>PHP|DISCHI</title>
+    <title>AJAX|DISCHI</title>
   </head>
   <body>
 
@@ -24,10 +17,7 @@ Font: Lato
 Opzionale:
 - Attraverso un’altra chiamata ajax, filtrare gli
 album per artista
-Consigli:
-	1- Creare 2 file index diversi, uno per la versione col solo php, l’altro per la versione Ajax.
-Il file zip contiene lo screenshot e il file database.php.
-Oggi facciamo solo la versione index fatta col php utilizzando laravel-mix per il creare i file css, poi domani dopo la correzione facciamo la versione con Ajax.
+
 -->
 
     <header>
@@ -46,22 +36,29 @@ Oggi facciamo solo la versione index fatta col php utilizzando laravel-mix per i
 
     <div class="cds-container container">
 
-      <?php foreach($database as $dati) {?>
-        <div class="cd">
-          <img src="<?php echo  $dati['poster'];?>" alt="">
-          <h3><?php echo  $dati['title'];?></h3>
-          <span class="author"><?php echo  $dati['author'];?></span>
-          <span class="year"><?php echo  $dati['year'];?></span>
-        </div>
-      <?php } ?>
+      <!-- Chiamata AJAX -->
 
     </div>
 
+    <!-- TEMPLATE -->
+    <script id="entry-template"  type="text/x-handlebars-template">
 
+      <div class="cd">
+        <img src="{{ poster }}" alt="">
+        <h3>{{ title }}</h3>
+        <span class="author">{{ author }}</span>
+        <span class="year">{{ year }}</span>
+        <span class="genre">{{ genre }}</span>
+      </div>
+
+    </script>
+    <!-- END TEMPLATE -->
+
+    <!-- SCRIPT -->
     <script src="dist/app.js">
 
     </script>
-
+    <!-- END SCRIPT --> 
 
   </body>
 </html>
