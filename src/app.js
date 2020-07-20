@@ -9,7 +9,7 @@ $(document).ready(function() {
   */
   $.ajax(
     {
-      url: 'http://localhost:8888/php-ajax-dischi/database.php',
+      url: 'http://localhost:8888/php-ajax-dischi/server.php',
       method: 'GET',
       success: function(data){
         // Handlebars.
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
   $.ajax(
     {
-      url: 'http://localhost:8888/php-ajax-dischi/database.php',
+      url: 'http://localhost:8888/php-ajax-dischi/server.php',
       method: 'GET',
       success: function(data){
         // console.log(data[0]['author'])

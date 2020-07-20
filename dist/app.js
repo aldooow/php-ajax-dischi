@@ -16097,7 +16097,7 @@ $(document).ready(function () {
   attraverso una chiamata i dischi a php e li stamperà attraverso handlebars.
   */
   $.ajax({
-    url: 'http://localhost:8888/php-ajax-dischi/database.php',
+    url: 'http://localhost:8888/php-ajax-dischi/server.php',
     method: 'GET',
     success: function success(data) {
       // Handlebars.
@@ -16126,7 +16126,7 @@ $(document).ready(function () {
   */
 
   $.ajax({
-    url: 'http://localhost:8888/php-ajax-dischi/database.php',
+    url: 'http://localhost:8888/php-ajax-dischi/server.php',
     method: 'GET',
     success: function success(data) {
       // console.log(data[0]['author'])
